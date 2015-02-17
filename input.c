@@ -792,7 +792,7 @@ int in_config_parse_dev(const char *name)
 	{
 		if (in_devices[i].name == NULL)
 			continue;
-		if (strcmp(in_devices[i].name, name) == 0)
+		if (strstr(in_devices[i].name, name) == in_devices[i].name)
 			return i;
 	}
 
